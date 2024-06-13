@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='index.css') }}"
+  />
+</head>
+<body class="main">
+    <div>
+       <h1>Welcome</h1>
+    </div>
+    <div class="dataset">
+        <h3>Cars dataset</h3>
+        <button><a href="/classification">Classification model</a></button>
+        <button><a href="/regression">Regression model</a></button>
+    </div>
+    <div class="dataset">
+        <h3>Satellite dataset</h3>
+        <button><a href="/d2_classification">Classification Model</a></button>
+        <button><a href="/d2_regression">Regression Model</a></button>
+
+    </div>
+
+    
+   <div class="content">
+    <h3>About</h3>
+    <p>Two datasets, namely "CARS" and "SATELLITE" has been selected to train 2 classification and 2 regression model, one for each datasets. 
+        <h4>Following are the steps taken to prepare the models:</h4>
+        <ul>
+            <li>Pre-processing has been done on each of the data sets and in both the datasets, new features have been created using the existing features. Pre-processing included resolving datatype issue, finding and fixing missing and ambigous valies, converting non numeric data into numeric data via encoding, etc. </li>
+            <li>The clean data has been later stored in sqlite3 database in the directry named "instance"</li>
+            <li>Data is fetched from database and 3 classification and 3 regression model have been selected, all trained and tested, finally selecting the one with the best score among others.</li>
+        </ul>
+
+        <h4>Source of databases:</h4>
+        <ul>
+            <li><a href="https://www.kaggle.com/datasets/tr1gg3rtrash/cars-2022-dataset">Cars</a></li>
+            <li><a href="https://www.kaggle.com/datasets/amandkaggle/information-of-satellites-launched-by-isro">Satellite</a></li>
+        </ul>
+    </p>
+ </div>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title>Satellite Success Classification</title>
+</head>
+<body class="parent">
+    <h1>Satellite Mass Prediction</h1>
+    <form action="/d2_reg" method="post">
+
+        <label for="Periapsis_km">Periapsis km</label>
+        <input type="number" step="0.01" id="Periapsis_km" name="Periapsis_km" required/>
+
+        <label for="Apoapsis_km">Apoapsis km</label>
+        <input type="number" step="0.01" id="Apoapsis_km" name="Apoapsis_km" required/>
+        
+        <label for="Period_in_minutes">Period in minute</label>
+        <input type="number" step="0.01" id="Period_in_minutes" name="Period_in_minutes" required/>
+
+        <label for="Orbit">Orbit Type</label>
+        <select name="Orbit_Type" id="Orbit">
+            <option value=1>LEO</option>
+            <option value=2>GEO</option>
+            <option value=3>other</option>
+        </select>
+
+        <label for="purpose">Purpose</label>
+        <select name="Purpose" id="purpose">
+            <option value=1>Earth Observation</option>
+            <option value=2>Other</option>
+            <option value=3>Communication</option>
+            <option value=4>Space Exploration</option>
+            <option value=5>Engineering</option>
+        </select>
+
+        <button type="submit">Submit</button>
+        <span class="result">
+            {{pred_txt}}
+
+    </span>
+
+    </form>
+
+    <br>
+    <br>
+    
+    <div class="table">
+      <h3>Random rows from dataset "SATELLITE"</h3>
+
+        <table border="1">
+            <thead>
+              <tr>
+                <!-- <th>s.no</th> -->
+                <th>Discipline</th>
+                <th>Launch mass</th>
+                <th>Launch date</th>
+                <th>Launch vehicle</th>
+                <th>Launch site</th>
+                <th>Periapsis km</th>
+                <th>Apoapsis km</th>
+                <th>Periods in minutes</th>
+                <th>Success</th>
+                <th>Orbit type</th>
+                <th>Launch year</th>
+                <th>Launch month</th>
+                <th>Satellite purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for sat in random_sat %}
+                <tr>
+                  <!-- <td>{{ sat.id }}</td> -->
+                  <td>{{ sat.Discipline }}</td>
+                  <td>{{ sat.Launch_mass }}</td>
+                  <td>{{ sat.Launch_date }}</td>
+                  <td>{{ sat.Launch_vehicle }}</td>
+                  <td>{{ sat.Launch_site }}</td>
+                  <td>{{ sat.Periapsis_km }}</td>
+                  <td>{{ sat.Apoapsis_km }}</td>
+                  <td>{{ sat.Period_in_minutes }}</td>
+                  <td>{{ sat.Success }}</td>
+                  <td>{{ sat.Orbit_Type }}</td>
+                  <td>{{ sat.Launch_year }}</td>
+                  <td>{{ sat.Launch_month }}</td>
+                  <td>{{ sat.Satellite_Purpose }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          
+    </div>
+
+</body>
+</html>

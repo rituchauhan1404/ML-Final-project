@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+    <title>Car's average price predict</title>
+  </head>
+  <body class="parent">
+    <h1>Average Price Prediction</h1>
+    <form action="/d1_reg" method="post">
+    
+
+      <div class="column">
+        <label for="engine_displacement">Engine displacement</label>
+      <input
+        type="number"
+        step="0.01"
+        name="engine_displacement"
+        id="engine_displacement"
+        required
+      />
+
+      <label for="no_cylinder">Number of cylinders</label>
+      <input
+        type="number"
+        step="0.01"
+        name="no_cylinder"
+        id="no_cylinder"
+        required
+      />
+
+      <label for="seating_capacity">Seating capacity</label>
+      <input
+        type="number"
+        step="0.01"
+        name="seating_capacity"
+        id="seating_capacity"
+        required
+      />
+      </div>
+
+      <div class="column">
+        <label for="fuel_tank_capacity">Fuel tank capacity</label>
+        <input
+          type="number"
+          step="0.01"
+          name="fuel_tank_capacity"
+          id="fuel_tank_capacity"
+          required
+        />
+
+        <label for="rating">Rating</label>
+        <input type="number" step="0.01" name="rating" id="rating" required />
+
+        <label for="starting_price">Starting price</label>
+        <input
+          type="number"
+          step="0.01"
+          name="starting_price"
+          id="starting_price"
+          required
+        />
+      </div>
+
+      <div class="column">
+        <label for="ending_price">Ending price</label>
+        <input
+          type="number"
+          step="0.01"
+          name="ending_price"
+          id="ending_price"
+          required
+        />
+
+        <label for="max_torque_nm">Max torque nm</label>
+        <input
+          type="number"
+          step="0.01"
+          name="max_torque_nm"
+          id="max_torque_nm"
+          required
+        />
+
+        <label for="max_torque_rpm">Max torque rpm</label>
+        <input
+          type="number"
+          step="0.01"
+          name="max_torque_rpm"
+          id="max_torque_rpm"
+          required
+        />
+      </div>
+
+      <div class="column">
+        <label for="max_power_bhp">Max power bhp</label>
+        <input
+          type="number"
+          step="0.01"
+          name="max_power_bhp"
+          id="max_power_bhp"
+          required
+        />
+
+        <label for="max_power_rp">Max power rp</label>
+        <input
+          type="number"
+          step="0.01"
+          name="max_power_rp"
+          id="max_power_rp"
+          required
+        />
+
+        <label for="fuel_efficiency">Fuel efficiency</label>
+        <input
+          type="number"
+          step="0.01"
+          name="fuel_efficiency"
+          id="fuel_efficiency"
+          required
+        />
+      </div>
+      <div class="column">
+        <label for="reviews_count">Reviews count</label>
+        <input
+        type="number"
+        step="0.01"
+        name="reviews_count"
+        id="reviews_count"
+        required
+      />
+      </div>
+
+      <div class="column">
+        <label for="tm">Transmission</label>
+        <select name="transmission_type" id="tm">
+          <option value="1">Automatic</option>
+          <option value="2">Manual</option>
+          <option value="3">Electric</option>
+        </select>
+        <label for="fuel_type">Fuel type</label>
+        <select name="fuel_type" id="fuel_type" required>
+          <option value="1">Petrol</option>
+          <option value="2">Diesel</option>
+          <option value="3">CNG</option>
+          <option value="4">Electric</option>
+        </select>
+
+        <label for="body_type">Body type</label>
+        <select name="body_type">
+          <option value="1">Hatchback</option>
+          <option value="2">SUV</option>
+          <option value="3">MUV</option>
+          <option value="4">Sedan</option>
+          <option value="5">Hybrid</option>
+          <option value="6">Minivan</option>
+          <option value="7">Pickup Truck</option>
+          <option value="8">Coupe</option>
+          <option value="9">Convertible</option>
+          <option value="10">Luxury</option>
+          <option value="11">Wagon</option>
+        </select>
+        <label for="brand">Brand</label>
+        <select name="brand">
+          <option value="1">Maruti</option>
+          <option value="2">Mahindra</option>
+          <option value="3">Toyota</option>
+          <option value="4">Hyundai</option>
+          <option value="5">Tata</option>
+          <option value="6">Kia</option>
+          <option value="7">Honda</option>
+          <option value="8">Land</option>
+          <option value="9">MG</option>
+          <option value="10">Citroen</option>
+          <option value="11">Nissan</option>
+          <option value="12">Renault</option>
+          <option value="13">Lamborghini</option>
+          <option value="14">Volkswagen</option>
+          <option value="15">Skoda</option>
+          <option value="16">Mercedes-Benz</option>
+          <option value="17">Volvo</option>
+          <option value="18">Jeep</option>
+          <option value="19">Force</option>
+          <option value="20">BMW</option>
+          <option value="21">Audi</option>
+          <option value="22">Rolls-Royce</option>
+          <option value="23">Bajaj</option>
+          <option value="24">Ferrari</option>
+          <option value="25">Jaguar</option>
+          <option value="26">Datsun</option>
+          <option value="27">Isuzu</option>
+          <option value="28">Porsche</option>
+          <option value="29">BYD</option>
+          <option value="30">Mini</option>
+          <option value="31">Lexus</option>
+          <option value="32">Bentley</option>
+          <option value="33">Maserati</option>
+          <option value="34">Aston</option>
+          <option value="35">Rolls</option>
+          <option value="36">Strom</option>
+          <option value="37">Compass</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+      <span class="result">
+        {{pred_txt}}
+
+</span>
+    </form>
+    <h3>Random rows from dataset "CARS"</h3>
+
+    <div class="table">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Car Name</th>
+            <th>Reviews Count</th>
+            <th>Fuel Type</th>
+            <th>Engine displacement</th>
+            <th>Number of cylinders</th>
+            <th>Seating capacity</th>
+            <th>Transmission type</th>
+            <th>Fuel tank capacity</th>
+            <th>Body type</th>
+            <th>Rating</th>
+            <th>Starting Price</th>
+            <th>Ending price</th>
+            <th>Max torque nm</th>
+            <th>Max torque rpm</th>
+            <th>Max power bhp</th>
+            <th>Max power rp</th>
+            <th>Brand</th>
+            <th>Average price</th>
+            <th>Fuel efficiency</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% for cars in random_cars %}
+            <tr>
+              <td>{{ cars.car_name }}</td>
+              <td>{{ cars.reviews_count }}</td>
+              <td>{{ cars.fuel_type }}</td>
+              <td>{{ cars.engine_displacement }}</td>
+              <td>{{ cars.no_cylinder }}</td>
+              <td>{{ cars.seating_capacity }}</td>
+              <td>{{ cars.transmission_type }}</td>
+              <td>{{ cars.fuel_tank_capacity }}</td>
+              <td>{{ cars.body_type }}</td>
+              <td>{{ cars.rating }}</td>
+              <td>{{ cars.starting_price }}</td>
+              <td>{{ cars.ending_price }}</td>
+              <td>{{ cars.max_torque_nm }}</td>
+              <td>{{ cars.max_torque_rpm }}</td>
+              <td>{{ cars.max_power_bhp }}</td>
+              <td>{{ cars.max_power_rp }}</td>
+              <td>{{ cars.brand }}</td>
+              <td>{{ cars.average_price }}</td>
+              <td>{{ cars.fuel_efficiency }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+    </div>
+    <br />
+    <br />
+  </body>
+</html>

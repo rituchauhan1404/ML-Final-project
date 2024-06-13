@@ -1,0 +1,91 @@
+*{
+    margin: 0;   
+}
+
+body{
+    background-color: antiquewhite;
+
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h1{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.main h3{
+    font-size: 2rem;
+}
+
+body form{
+    display: grid;  
+    grid-template-columns: 20% 20%;
+    grid-template-rows: 2;
+    row-gap: 1rem;
+}
+
+label{
+    font-weight: bold;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+input, select{
+    margin-right: 3rem;
+}
+
+button{
+    margin-top: 1rem;
+    background-color: greenyellow;
+    border: none;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width: 7rem;
+}
+
+.main button{
+    width: fit-content;
+    background-color: red;
+    margin-bottom: 0.5rem;
+}
+
+.main button a{
+    text-decoration: none;
+    color: white;
+}
+
+.column{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 1rem;
+    align-items: baseline;
+    /* grid-template-rows: ; */
+}
+.table{
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+h3{
+    margin: 0.5rem;
+}
+
+h1{
+    margin-bottom: 2rem;
+}
+
+.result{
+    color: red;
+}
+
+p{
+    line-height: 3rem;
+}
